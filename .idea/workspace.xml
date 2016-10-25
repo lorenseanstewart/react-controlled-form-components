@@ -23,7 +23,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FormContainer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FormContainer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/FormContainer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
@@ -31,6 +31,16 @@
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,6 +75,7 @@
         <option value="$PROJECT_DIR$/src/styles.css" />
         <option value="$PROJECT_DIR$/src/components/Select.js" />
         <option value="$PROJECT_DIR$/src/containers/FormContainer.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -232,12 +243,12 @@
       <workItem from="1476928570483" duration="2403000" />
       <workItem from="1477072721429" duration="18994000" />
       <workItem from="1477417813308" duration="340000" />
-      <workItem from="1477418187599" duration="3599000" />
+      <workItem from="1477418187599" duration="3851000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25336000" />
+    <option name="totallyTimeSpent" value="25588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="344" y="30" width="1080" height="757" extended-state="0" />
@@ -429,6 +440,14 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
