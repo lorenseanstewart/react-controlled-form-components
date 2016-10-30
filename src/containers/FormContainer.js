@@ -9,12 +9,12 @@ class FormContainer extends Component {
 		super(props);
 		this.state = {
 			ownerName: '',
-			petSelections: ['dog', 'cat', 'rabbit', 'iguana', 'pony', 'ferret', 'fish', 'bird'],
-			selectedPets: ['dog', 'cat', 'ferret'],
-			ageOptions: ['18 - 25', '26 - 59', '60 or older'],
+			petSelections: [],
+			selectedPets: [],
+			ageOptions: [],
 			ownerAgeRangeSelection: '',
-			siblingOptions: ['yes', 'no'],
-			siblingSelection: ['yes'],
+			siblingOptions: [],
+			siblingSelection: [],
 			currentPetCount: 0,
 			description: ''
 		};
@@ -27,14 +27,31 @@ class FormContainer extends Component {
 		this.handleSiblingsSelection = this.handleSiblingsSelection.bind(this);
 		this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
 	}
+	componentDidMount() {
+		fetch('./fake_db.json')
+			.then(res => res.json())
+			.then(data => {
+				this.setState({
+					ownerName: data.ownerName,
+					petSelections: data.petSelections,
+					selectedPets: data.selectedPets,
+					ageOptions: data.ageOptions,
+					ownerAgeRangeSelection: data.ownerAgeRangeSelection,
+					siblingOptions: data.siblingOptions,
+					siblingSelection: data.siblingSelection,
+					currentPetCount: data.currentPetCount,
+					description: data.description
+				});
+			});
+	}
 	handleFullNameChange(e) {
-		this.setState({ ownerName: e.target.value }, () => console.log('name:', this.state.ownerName))
+		this.setState({ ownerName: e.target.value }, () => console.log('name:', this.state.ownerName));
 	}
 	handleCurrentPetCountChange(e) {
-		this.setState({ currentPetCount: e.target.value }, () => console.log('pet count', this.state.currentPetCount))
+		this.setState({ currentPetCount: e.target.value }, () => console.log('pet count', this.state.currentPetCount));
 	}
 	handleAgeRangeSelect(e) {
-		this.setState({ ownerAgeRangeSelection: e.target.value }, () => console.log('age range', this.state.ownerAgeRangeSelection))
+		this.setState({ ownerAgeRangeSelection: e.target.value }, () => console.log('age range', this.state.ownerAgeRangeSelection));
 	}
 	handlePetSelection(e) {
 		const newSelection = e.target.value;
@@ -44,10 +61,10 @@ class FormContainer extends Component {
 		} else {
 			newSelectionArray = [...this.state.selectedPets, newSelection];
 		}
-		this.setState({ selectedPets: newSelectionArray }, () => console.log('pet selection', this.state.selectedPets))
+		this.setState({ selectedPets: newSelectionArray }, () => console.log('pet selection', this.state.selectedPets));
 	}
 	handleSiblingsSelection(e) {
-		this.setState({ siblingSelection: [e.target.value] }, () => console.log('siblingz', this.state.siblingSelection))
+		this.setState({ siblingSelection: [e.target.value] }, () => console.log('siblingz', this.state.siblingSelection));
 	}
 	handleDescriptionChange(e) {
 		// const textArray = e.target.value.split('').filter(x => x !== 'e');
@@ -79,7 +96,7 @@ class FormContainer extends Component {
 			description: this.state.description
 		};
 
-		console.log('Submit this:', formPayload);
+		console.log('Send this in a POST request:', formPayload);
 	}
 	render() {
 		return (
