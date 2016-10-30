@@ -68,7 +68,7 @@ class FormContainer extends Component {
 	}
 	handleDescriptionChange(e) {
 		// const textArray = e.target.value.split('').filter(x => x !== 'e');
-		// console.log('string split into array of letters',textArray)
+		// console.log('string split into array of letters',textArray);
 		// const filteredText = textArray.join('');
 		// this.setState({ description: filteredText }, () => console.log('description', this.state.description));
 		this.setState({ description: e.target.value }, () => console.log('description', this.state.description));
