@@ -103,14 +103,14 @@ class FormContainer extends Component {
 			<form className="container" onSubmit={this.handleFormSubmit}>
 				<h5>Pet Adoption Form</h5>
 				<SingleInput
-					inputType="text"
-					title="Full name"
-					name="name"
+					inputType={'text'}
+					title={'Full name'}
+					name={'name'}
 					controlFunc={this.handleFullNameChange}
 					content={this.state.ownerName}
-					placeholder="Type first and last name here" />
+					placeholder={'Type first and last name here'} />
 				<Select
-					name="ageRange"
+					name={'ageRange'}
 					placeholder={'Choose your age range'}
 					controlFunc={this.handleAgeRangeSelect}
 					options={this.state.ageOptions}
@@ -130,20 +130,20 @@ class FormContainer extends Component {
 					options={this.state.siblingOptions}
 					selectedOptions={this.state.siblingSelection} />
 				<SingleInput
-					inputType="number"
-					title="How many pets do you currently own?"
-					name="currentPetCount"
+					inputType={'number'}
+					title={'How many pets do you currently own?'}
+					name={'currentPetCount'}
 					controlFunc={this.handleCurrentPetCountChange}
 					content={this.state.currentPetCount}
-					placeholder="Enter number of current pets" />
+					placeholder={'Enter number of current pets'} />
 				<TextArea
-					title="If you currently own pets, please write their names, breeds, and an outline of their personalities."
+					title={'If you currently own pets, please write their names, breeds, and an outline of their personalities.'}
 					rows={5}
 					resize={false}
 					content={this.state.description}
 					name={'currentPetInfo'}
 					controlFunc={this.handleDescriptionChange}
-					placeholder="Please be thorough in your descriptions" />
+					placeholder={'Please be thorough in your descriptions'} />
 				<input
 					type="submit"
 					className="btn btn-primary float-right"
