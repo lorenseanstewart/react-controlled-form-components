@@ -1,6 +1,6 @@
 ###Tutorial: React.js Controlled Form Components
 
-This repo is the companion to my blog post, [React.js Controlled Form Components]().
+This repo is the companion to my blog post, [React.js Controlled Form Components](http://lorenstewart.me/2016/10/31/react-js-forms-controlled-components/).
 
 To get started:
  1. Make sure you're using Node 6 or higher (4 and higher will work, though)
