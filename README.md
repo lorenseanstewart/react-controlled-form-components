@@ -1,4 +1,4 @@
-###Tutorial: React.js Controlled Form Components
+### Tutorial: React.js Controlled Form Components
 
 This repo is the companion to my blog post, [React.js Controlled Form Components](http://lorenstewart.me/2016/10/31/react-js-forms-controlled-components/).
 
